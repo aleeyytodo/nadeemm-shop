@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Landing Page Produk - Nadeemm Shop" />
+  <title>Nadeemm Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="toast" class="toast">Produk berhasil ditambahkan ke keranjang</div>
+
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">
+        <img src="assets/nadeemmShop-header.png" alt="Logo" class="logo-img" />
+        Nadeemm Shop
+      </h1>
+      <div class="header-actions">
+        <input type="text" id="searchInput" placeholder="Cari produk..." />
+        <div id="cartIcon" class="cart-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-cart" fill="white" viewBox="0 0 24 24" stroke="none" width="24" height="24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+            <circle cx="9" cy="20" r="1.5"/>
+            <circle cx="17" cy="20" r="1.5"/>
+          </svg>
+          <span id="cartCount" class="cart-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="filters">
+      <div class="container">
+        <select id="categoryFilter">
+          <option value="all">Semua Kategori</option>
+          <option value="sepatu">Sepatu</option>
+          <option value="jam">Jam Tangan</option>
+          <option value="kaos">Kaos</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <div class="container" id="productList">
+        <!-- Produk akan dirender oleh script.js -->
+      </div>
+    </section>
+  </main>
+
+  <div id="productModal" class="modal-overlay">
+    <div class="modal-content">
+      <span id="modalClose" class="modal-close">&times;</span>
+      <img id="modalImage" src="" alt="Gambar Produk" class="modal-image" />
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <p id="modalPrice" class="modal-price"></p>
+      <p id="modalDescription" class="modal-description"></p>
+      <div id="modalTestimonial" class="modal-testimonial"></div>
+      <a id="modalBuyBtn" href="#" target="_blank" class="buy-button">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <div id="cartPreview" class="cart-preview">
+    <div class="cart-header">
+      <h3>Keranjang Saya</h3>
+      <button id="closeCart" class="close-cart" aria-label="Tutup Keranjang">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p>Belum ada produk di keranjang.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 NadeemmDev. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
