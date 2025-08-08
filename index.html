@@ -9,13 +9,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="maintenance" class="maintenance-overlay">
+  <div class="maintenance-content">
+    <div class="maintenance-icon">🚧</div>
+    <h2>Situs Sedang Dalam Perawatan</h2>
+    <p>Kami sedang melakukan pemeliharaan untuk meningkatkan pengalaman Anda. Silakan kembali lagi nanti!</p>
+  </div>
+</div>
 
   <div id="toast" class="toast">Produk berhasil ditambahkan ke keranjang</div>
 
   <header class="navbar">
     <div class="container">
       <h1 class="logo">
-        <img src="assets/nadeemmShop-header.png" alt="Logo" class="logo-img" />
+        <img src="assets/logo-header.png" alt="Logo Nadeemm Shop" class="logo-img" />
         Nadeemm Shop
       </h1>
       <div class="header-actions">
@@ -32,6 +39,21 @@
     </div>
   </header>
 
+  <!-- ✅ Cart Preview dipindahkan ke sini -->
+  <div id="cartPreview" class="cart-preview">
+    <div class="cart-header">
+      <h3>Keranjang Saya</h3>
+      <button id="closeCart" class="close-cart" aria-label="Tutup Keranjang">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p>Belum ada produk di keranjang.</p>
+    </div>
+  </div>
+
   <main class="main-content">
     <section class="filters">
       <div class="container">
@@ -46,7 +68,7 @@
 
     <section class="product-grid">
       <div class="container" id="productList">
-        <!-- Produk akan dirender oleh script.js -->
+        <!-- Produk akan dirender lewat script.js -->
       </div>
     </section>
   </main>
@@ -60,20 +82,6 @@
       <p id="modalDescription" class="modal-description"></p>
       <div id="modalTestimonial" class="modal-testimonial"></div>
       <a id="modalBuyBtn" href="#" target="_blank" class="buy-button">Beli Sekarang</a>
-    </div>
-  </div>
-
-  <div id="cartPreview" class="cart-preview">
-    <div class="cart-header">
-      <h3>Keranjang Saya</h3>
-      <button id="closeCart" class="close-cart" aria-label="Tutup Keranjang">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-    <div id="cartItems" class="cart-items">
-      <p>Belum ada produk di keranjang.</p>
     </div>
   </div>
 
